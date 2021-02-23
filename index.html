@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <head>
+    <html lang="en"></html>
     <meta charset="UTF-8">
     <title>Google</title>
     <style>
+        body {
+            font-family: arial,sans-serif;
+            font-size: 14px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #nine-dots {
+            width: 17px;
+            height: auto;            
+        }
+        #nine-dots:hover {
+            cursor: pointer;
+        }
+        .top-left {
+            float: left;
+            padding-top: 17px;
+        }
+        .top-right {
+            display: flex;
+            align-items: center;
+            float: right;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            font-size: 12px;
+        }
+        #profile {
+            margin-top: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: blue;
+            border-radius: 50%;
+            color: white;
+        }
+        #logo, #search-bar, #search-buttons{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #logo {
+            padding-top: 250px;
+        }
+        #search-bar {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            border: 10px;
+            border-color: black;
+        }
+        form: {
+            width: 200px;
+        }
+        #search-buttons {
+            margin-bottom: 150px;
+        }
+
+        #bottom-section {
+            background: rgba(211, 211, 211, 0.3);
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 15px;           
+        }
+        
+        .bottom-left {
+            float: left;
+            padding-left: 10px;
+        }
+        .bottom-right {
+            float: right;
+        }
     </style>
 </head>
 <body>
     <div id="top-nav">
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Gmail</a></li>
-            <li><a href="#">Images</a></li>
-            <li><img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/buttonsymbolofninedots_80014.png"></li>
-            <li>D</li>
+            <li class="top-left"><a href="#">About</a></li>
+            <li class="top-left"><a href="#">Store</a></li>
+            <li class="top-right" id="profile">D</li>
+            <li class="top-right"><img id="nine-dots" src="https://cdn.icon-icons.com/icons2/1129/PNG/512/buttonsymbolofninedots_80014.png"></li>
+            <li class="top-right"><a href="#">Images</a></li>
+            <li class="top-right"><a href="#">Gmail</a></li>
         </ul>
     </div>
     <div id="logo">
@@ -28,14 +114,14 @@
         <button id="search">Google Search</button>
         <button id="lucky">I'm Feeling Lucky</button>
     </div>
-    <div id="bottom-nav">
-        <ul>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">How Search works</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Settings</a></li>
+    <div id="bottom-section">
+        <ul id="bottom-nav">
+            <li class="bottom-left"><a href="#">Advertising</a></li>
+            <li class="bottom-left"><a href="#">Business</a></li>
+            <li class="bottom-left"><a href="#">How Search works</a></li>
+            <li class="bottom-right"><a href="#">Settings</a></li>
+            <li class="bottom-right"><a href="#">Terms</a></li>
+            <li class="bottom-right"><a href="#">Privacy</a></li>
         </ul>
     </div>
 </body>
